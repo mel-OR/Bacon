@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "ES6",
+      "moduleResolution": "node",
+      "types": ["@wdio/sync", "@types/jasmine", "node"]
+    },
+    "include": ["./**/*.ts"],
+    "paths": {
+      "~/*": ["./specs/*", "./pages/*", "./node_modules"]
+    }
+  }
