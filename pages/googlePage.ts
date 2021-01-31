@@ -13,16 +13,11 @@ public get nutritionFactsDiv() {
 }
 
 public get baconFormatSelector() {
-
-return $('//div[contains(text(), "Nutrition Facts")]/../div/div/div/div/select');
-    //return this.nutritionFactsDiv.$('select');
-    //class="Ev4pye kno-nf-fs"
+    return $('//div[contains(text(), "Nutrition Facts")]/../div/div/div/div/select');
 }
 
 public get caloriesValueLabel() {
     return $('//td/span[text()="Calories"]/following-sibling::span');
-    //or try css if the class locator stays the same 
-    //return $('span[class="V6Ytv"]+span');
 } 
 
 public get getFirstSearchResultLink() {
@@ -39,6 +34,18 @@ public get getFirstSearchResultLink() {
 public selectBaconOptionFromSelector(option: string) {
     this.baconFormatSelector.click();
     $('//option[contains(text(), "'+ option +'")]').click();
+}
+
+public getAllBaconOptionsWithCalories() {
+    const optionsAndCaloriesMap = new Map();
+    const allOptions = $$('//div[contains(text(), "Nutrition Facts")]/../div/div/div/div/select/option');
+    allOptions.forEach( (option) => {
+        const text  = option.getText();
+        this.selectBaconOptionFromSelector(text);
+        const calories = parseInt(this.caloriesValueLabel.getText());
+        optionsAndCaloriesMap.set(text, calories);
+    })
+    return optionsAndCaloriesMap;
 }
 
 public searchResultsIsLoaded() {
