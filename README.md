@@ -15,4 +15,4 @@ Regresion tests for Bacon
 ## Troubleshooting
 * The dependent packages needed for the UI test should give an error during the `yarn install` step if you didn't get them in place in the right order. The messages have the command needed to get those in place. 
 * Make sure you have a recent version of Chrome installed. Though the chromerdriver that is pulled for the project is currently up to date, your browser must also be compatible with that. If the test hangs or the test output shows the browser session was closed without running steps, then go to Chrome and make sure you are up to date and try running the test again.
-* If there are other problems, raise an issue in github for this project.
+* If there are other problems, [raise an issue in github](https://github.com/mel-OR/Bacon/issues) for this project.
