@@ -1,5 +1,10 @@
 # Bacon
 Regresion tests for Bacon. This will check different parts of the search results on google.
+* Used WebdriverIO with Jasmine to run the browser UI tests, using the page object pattern. This framework can be extended to run on mobile later if needed, by using the Appium driver rather than the Selenium driver.
+* Added Typescript because it's safer than plain old javascript!
+* Added babel because Jasmine would cause errors in past usage of it in certain browsers. To-do: See if that is still needed.
+* The full list of libraries used can be seen in the package.json file under the "dependencies" section. 
+
 
 ## Prerequisites and Installing
 * **This project is only supported for macOS!**
@@ -19,3 +24,4 @@ Regresion tests for Bacon. This will check different parts of the search results
 * The dependent packages needed for the UI test should give an error during the `yarn install` step if you didn't get them in place in the right order. The messages have the command needed to get those in place. 
 * Make sure you have a recent version of Chrome installed. Though the chromerdriver that is pulled for the project is currently up to date, your browser must also be compatible with that. If the test output shows the browser session was closed without running steps, then go to Chrome and make sure you are up to date and try running the test again.
 * If there are other problems, [raise an issue in github](https://github.com/mel-OR/Bacon/issues) for this project.
+
