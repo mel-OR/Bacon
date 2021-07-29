@@ -1,0 +1,8 @@
+{
+	"spec_dir": "./specs/api/",
+	"spec_files": [ "weather.api.spec.ts" ],
+	"helpers": [ "./reporter.ts", "require.resolve('@babel/register')" ],
+	"requires": [ "ts-node/register" ],
+	"stopSpecOnExpectationFailure": false,
+	"random": false
+}
