@@ -1,8 +1,6 @@
 # Bacon
 Regression tests for Bacon. This will check different parts of the search results on google.
 * Used WebdriverIO with Jasmine to run the browser UI tests, using the page object pattern. This framework can be extended to run on mobile later if needed, by using the Appium driver rather than the Selenium driver.
-* Added Typescript because it's safer than plain old javascript!
-* Added babel because Jasmine would cause errors in past usage of it in certain browsers. To-do: See if that is still needed.
 * The full list of libraries used can be seen in the package.json file under the "dependencies" section. 
 
 
@@ -18,6 +16,7 @@ Regression tests for Bacon. This will check different parts of the search result
 
 ## Running the tests
 * From the main project folder "Bacon" run `yarn test:ui` to run the entire UI test suite
+* From the main project folder "Bacon" run `yarn test:api` to run the API tests
 
 ## Troubleshooting
 * You may need to install node-gyp under your root access. You'll see a Permission denied error if so. Run `sudo yarn add -g node-gyp` instead and enter your user's machine account password when prompted.
