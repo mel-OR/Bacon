@@ -1,5 +1,5 @@
 # Bacon
-Regresion tests for Bacon. This will check different parts of the search results on google.
+Regression tests for Bacon. This will check different parts of the search results on google.
 * Used WebdriverIO with Jasmine to run the browser UI tests, using the page object pattern. This framework can be extended to run on mobile later if needed, by using the Appium driver rather than the Selenium driver.
 * Added Typescript because it's safer than plain old javascript!
 * Added babel because Jasmine would cause errors in past usage of it in certain browsers. To-do: See if that is still needed.
